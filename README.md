@@ -118,7 +118,41 @@ Op deze pagina kan de gebruiker zijn/haar eigen profiel bekijken en heeft de geb
 - [x] MATCHEN
 - [x] README
 
+### Lastige onderdelen:
+Ik ben een lange tijd bezig geweest met de image upload, maar metname de spraakmemo upload, omdat deze fileupload net wat anders ging dan de image upload. Dit heb ik d.m.v. de onderstaande code kunnen oplossen.
 
+```
+var multer = require("multer")
+var upload = multer({
+  dest: "db/image/" // the folder where the uploaded images go
+})
+```
+Voor dit soort file uploads heb ik multer gebruikt en op de bovenstaande manier toegevoegd aan mijn app.
+
+```
+.post('/signup', upload.fields([{name: 'images'}, {name: 'spraakmemo'}]), signup)
+```
+Met de bovenstaande POST heb ik het mogelijk gemaakt dat de server.js begrijpt dat het gaat om een image en audio upload.
+Waar ik in het begin erg de fout in ging, is dat ik het voorheen vermeldde als:
+```
+  .post('/signup', upload.single('images'), signup)
+  .post('/signup', upload.single('spraakmemo'), signup)
+```
+Dit was niet te begrijpen en heb ik dit dus uiteindelijk moeten veranderen naar ```upload.fields```..
+
+```
+if(req.files.images != undefined || req.files.spraakmemo != undefined)
+{
+   imageName = req.files.images[0].filename;
+   spraakmemoName = req.files.spraakmemo[0].filename
+
+}else{
+
+   imageName = null;
+   spraakmemoName = null;
+}
+```
+D.m.v. deze bovenstaande laatste if/else functie heb ik het volledig werkend kunnen krijgen. 
 
 ### Credits:
 Ik heb gedurende dit backend project veel om hulp moeten vragen omdat ik er vaak zelf (na het doen van onderzoek op internet) niet uit kwam.
