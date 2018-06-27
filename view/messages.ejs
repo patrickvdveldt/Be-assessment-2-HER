@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Your Voice</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/Login_v2/css/main.css">
+  <link rel="stylesheet" href="/Login_v2/css/util.css">
+</head>
+
+<body>
+  <header>
+    <h1>Berichten</h1>
+  </header>
+  <main>
+    <section id="nieuwematches">
+      <h2>Nieuwe Matches</h2> </section>
+    <div class="nieuwematches">
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/7.jpg" alt="profile7"> </article>
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/8.jpg" alt="profile8"> </article>
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/3.jpg" alt="profile3"> </article>
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/4.jpg" alt="profile4"> </article>
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/5.jpg" alt="profile5"> </article>
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/6.jpg" alt="profile6"> </article>
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/10.jpg" alt="profile10"> </article>
+      <article class="nieuwematchprofile"> <img class="profileimages" src="images/profiles/9.jpg" alt="profile10"> </article>
+    </div>
+    <h2>Chat Berichten</h2>
+    <div class="berichtenhome">
+
+      <% data.forEach(function(person, index){ %>
+      <a href="/chat/<%= index %>">
+        <section>
+          <article class="berichtenprofile"> <img class="berichtimages" src="/image/<%= person.images %>" alt="profile"> </article>
+          <section class="berichtinfo">
+            <h5 class="naam"><%= person.naam %>, <%= person.leeftijd %></h5>
+
+            <p class="berichtgeving"> <%= person.berichtgeving %></p>
+          </section>
+          <hr>
+        </section>
+      </a>
+      <% }) %>
+
+    </div>
+  </main>
+  <footer>
+    <nav class="cmda-tabbar">
+      <ul>
+        <li><a href="/">Ontdek</a></li>
+        <li><a href="/berichten.ejs">Berichten</a></li>
+        <li><a href="loggedprofile.ejs">Profiel</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>

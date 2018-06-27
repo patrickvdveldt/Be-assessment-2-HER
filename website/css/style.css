@@ -1,0 +1,743 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html{
+  background-color: #F9F9F9
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: Poppins-Regular;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#logo {
+    margin-top: -1.5em;
+    margin-bottom: -2.7em;
+    margin-right: -3.5em;
+    width: 16em;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+/*HEADER*/
+header{
+    position: fixed;
+    border: none;
+    z-index: 5;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #eaeaea;
+    box-shadow:  0.1em 0.02em 0.4em #9a44f6;
+}
+
+.zoekbalk{
+    padding-top: 5em;
+    margin-bottom: -4em;
+}
+
+.zoeken{
+    width: 30em;
+    height: 3em;
+    border-radius: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*BODY*/
+.error-page button {
+    background-color: #9a44f6;
+    color: white;
+    padding: 10px;
+    transition: all 1s;
+    width: 100px;
+    font-size: 1em;
+}
+
+.errorimg{
+    width: 25em;
+    padding-top: 4.5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.audioinput{
+    font-size: 1.2em;
+    text-align: center;
+    font-family: Poppins-Regular;
+}
+.back-button{
+    height: 1.5em;
+    margin-left: 1em;
+    position: absolute;
+}
+
+hr{
+    opacity: 0.2;
+    box-shadow:  0.1em 0.02em 0.4em #9a44f6;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.play-button{
+    background-image: url(../images/speaker.png);
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 0;
+    right: 0;
+    top: 40px;
+    margin: 0 auto;
+    background-size: cover;
+    background-color: white;
+}
+
+main{
+    background-color: #f9f9f9;
+    height: 100%;
+}
+.ontdekhome{
+    padding-bottom: 140px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    height: 100%;
+    margin-left: 7px;
+}
+
+.ontdekprofile{
+    height: 230px;
+    width: 160px;
+    margin: 0 10px 20px;
+    box-shadow: 2px 2px 6px rgba(6, 6, 6, 0.2);
+    border-radius: 5px;
+    background-color: white;
+    float: left;
+    position: relative;
+    top: 76px;
+}
+
+.nieuwematches{
+  padding-top: 5em;
+  padding-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.nieuwematchprofile{
+    height: 4em;
+    width: 4em;
+    margin: 0.5em;
+    box-shadow:  0.1em 0.1em 0.1em #888888;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+}
+
+.profileimages{
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+}
+
+.berichtenhome{
+    display: inline-block;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5em;
+}
+
+.berichtenprofile{
+    height: 6em;
+    width: 6em;
+    margin: 1em;
+    box-shadow:  0.1em 0.1em 0.1em #888888;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+}
+
+.profileimg{
+    height: 11em;
+    width: 11em;
+    box-shadow:  0.1em 0.1em 0.1em #888888;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    margin-bottom: 20px;
+}
+
+.profilefoto{
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -0.5em;
+    margin-bottom: -1.2em;
+    display: block;
+}
+
+.profilepic{
+    border-radius: 50%;
+    height: 11em;
+    width: 11em;
+    box-shadow:  0.1em 0.1em 0.1em #888888;
+}
+
+.berichtimages{
+    border-radius: 50%;
+    height: 6em;
+
+
+}
+
+.profilebars{
+    height: 4em;
+    width: 95%;
+    box-shadow:  0.1em 0.1em 0.1em #888888;
+    border-radius: 0.5em;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+
+/*ARTICLES*/
+
+.berichtinfo{
+    display: inline-block;
+    position: absolute;
+    margin-top: 2.7em;
+
+}
+
+.introductie{
+    padding: 1em;
+    background-color: whitesmoke;
+    margin-top: 10em
+}
+
+.like{
+    position: absolute;
+    bottom: 55px;
+    right: 46px;
+    width: 40px;
+    height: auto;
+}
+
+.dislike{
+    position: absolute;
+    bottom: 55px;
+    right: 4px;
+    width: 40px;
+    height: auto;
+}
+
+/*FONTS*/
+
+#nieuwematches{
+    padding-top: 6em;
+    margin-bottom: -4em;
+}
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Poppins-Bold;
+}
+
+.profielinfo{
+    font-size: 1.2em;
+    text-align: center;
+    font-family: Poppins-Regular;
+    margin-top: -0.6em;
+}
+
+h2{
+    font-size: 16px;
+    text-align: left;
+    font-family: Poppins-Regular;
+    color:#9a44f6;
+    padding-left: 16px;
+}
+
+h3{
+    font-size: 1em;
+    text-align: left;
+    font-family: Poppins-Regular;
+    color:#9a44f6;
+}
+
+h4{
+    font-size: 1em;
+    text-align: center;
+    font-family: Poppins-Regular;
+}
+
+h6{
+    font-size: 0.8em;
+    text-align: center;
+    font-family: Poppins-Regular;
+    padding-top: 1.6em
+}
+
+h6#chat-name-match{
+  font-size: 14px;
+  font-weight: bold
+}
+
+h7{
+    float: right;
+    font-size: 0.7em;
+    font-family: Poppins-Regular;
+    margin-top: -1.3em;
+    padding-right: 1em;
+    color:#9a44f6;
+
+}
+
+.naam{
+  font-family: Poppins-Regular;
+  font-size: 16px;
+  color: black;
+}
+
+.berichtgeving{
+  font-family: Poppins-Regular;
+  color: grey;
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+/*TABBLAD*/
+#messageicon{
+    opacity: 1;
+    margin-top: -2.5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 5em;
+    position: relative;
+}
+
+.cmda-tabbar ul {
+    background-color: #9a44f6;
+    border-top-color: rgb(183, 179, 175);
+    border-top-width: 1px;
+
+}
+.cmda-tabbar li a {
+    color: rgb(255, 255, 255);
+    font-family: Poppins-Regular ;
+}
+.cmda-tabbar li.active a {
+    color: #2800a0;
+}
+.cmda-tabbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.cmda-tabbar ul,
+.cmda-tabbar li,
+.cmda-tabbar a {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    line-height: 0em;
+    padding-bottom: 5px;
+}
+.cmda-tabbar ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    border-top-style: solid;
+}
+.cmda-tabbar li {
+    flex: 50%;
+}
+.cmda-tabbar li a {
+    font-family: Poppins-Medium;
+    color: white;
+    display: block;
+    text-decoration: none;
+    height: 40px;
+    padding-top: 24px;
+    text-align: center;
+}
+
+/* Chat containers */
+
+.chatten{
+    height: 5em;
+    width: 100%;
+    border-style:ridge;
+}
+
+.chatgesprek{
+    padding-top: 5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    color: #666666;
+    height: 65px;
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #d1bbef;
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #999;
+}
+
+
+
+/*MEDIAQUERIES*/
+@media (min-width:26em) {
+
+    .cmda-tabbar {
+        display: none;
+    }
+
+}
+
+@media (min-width:40em) {
+
+    .ontdekprofile{
+    height: 25em;
+    width: 20em;
+    margin: 1em;
+    box-shadow:  0.1em 0.1em 0.1em #888888;
+    border-radius: 0.4em;
+    background-color: white;
+    display: inline-block;
+}
+
+    .play-button{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: none;
+    margin-top: 10em;
+    margin-left: 9em;
+    width: 11em;
+    height: 11em;
+
+}
+
+
+    .introductie{
+    background-color: whitesmoke;
+    margin-top: 21em;
+}
+
+    .speakerbutton{
+    display: none;
+    position: absolute;
+    width: 4em;
+    opacity: 0.8;
+}
+
+    .like{
+    position: absolute;
+    margin-top: 20em;
+    margin-left: 11em;
+    width: 5em;
+
+}
+
+    .dislike{
+    position: absolute;
+    margin-top: 20em;
+    margin-left: 15em;
+    width: 5em;
+}
+}
+
+@media (max-width:26em) {
+
+    .cmda-tabbar {
+        display: block;
+    }
+}
+/* Mobile MEDIAQUERIES */
+@media (max-width:400px) {
+
+  /* Profile settings */
+  .nieuwematches#account-settings{
+    padding-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+
+
+  /* Error message */
+  .error-page{
+    padding: 0 25px;
+  }
+
+  .error-page #error-message{
+    margin-top: 50px;
+  }
+
+  .error-page #error-message #error-title{
+    padding-left: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .error-page #error-message #error-title span{
+    border-bottom: 1px solid
+  }
+
+  .error-page #error-message #error-context{
+    margin-top: 25px;
+  }
+
+  .error-page button{
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  /* Footer */
+  footer{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+
+  footer #form-chat-footer{
+    padding: 0 10px;
+    width: 86%;
+  }
+
+  footer .chatten{
+    border-style: none;
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 55px;
+    padding: 0 10px;
+  }
+  footer .chatten::placeholder{
+    font-size: 16px;
+  }
+
+  footer #form-chat-footer-button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 55px;
+    border: 1px solid silver;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+  }
+
+}

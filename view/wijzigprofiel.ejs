@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <title>Profiel wijzigen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/website/images/icons/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/website/Login_v2/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/util.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css"> </head>
+
+<body>
+  <div class="limiter">
+    <div class="container-login100">
+
+      <div class="wrap-login100">
+        <span class="login100-form-title p-b-26">Persoonlijke gegevens
+                   <p>Maak hiermee jezelf vindbaar</p>
+                    </span>
+
+<form class="" action="/change" method="post">
+
+          <div class="wrap-input100 validate-input">
+            <p class="account-setting-form-description" id="name">Naam:</p>
+            <input class="input100" type="text" name="naam" value="<%= user.naam %>" placeholder="Naam"></div>
+
+          <div class="wrap-input100 validate-input">
+            <p class="account-setting-form-description" id="password">Wachtwoord:</p>
+            <input class="input100" type="password" value="<%= user.wachtwoord %>" name="wachtwoord" placeholder="Wachtwoord">
+          </div>
+
+          <div class="wrap-input100 validate-input">
+            <p class="account-setting-form-description" id="email">Email:</p>
+            <input class="input100" type="email" name="email" value="<%= user.email %>" placeholder="Email">
+          </div>
+          <div class="wrap-input100 validate-input">
+            <p class="account-setting-form-description" id="age">Leeftijd:</p>
+            <input class="input100" type="text" name="leeftijd" value="<%= user.leeftijd %>" placeholder="Leeftijd">
+          </div>
+          <div class="wrap-input100 validate-input">
+            <p class="account-setting-form-description" id="gender">Geslacht:</p>
+            <select name="geslacht" class="input100" value="<%= user.geslacht %>"> Ik ben een: <br>
+                      <option name='man' value="man">Man</option>
+                      <option name'vrouw' value="vrouw">Vrouw</option>
+                    </select>
+            <span class="focus-input100"></span>
+          </div>
+
+          <span class="login100-form-title p-b-26">Persoonlijke Voorkeuren
+                           <p>Waar ben jij naar op zoek?</p>
+                            </span>
+          <div class="wrap-input100 validate-input input100"> Ik zoek een:
+            <br>
+            <select name="geslachtkeuze" value="<%= user.geslachtkeuze %>">
+                                <option name="man" value="Man" class="input100">Man</option>
+                                <option name='vrouw' value="Vrouw" class="input100">Vrouw</option>
+                                <option name='beide' value="Beide" class="input100">Beide</option>
+                            </select> <span class="focus-input100"></span>
+          </div>
+          <div class="wrap-input100 validate-input"> Max. afstand
+            <br>
+            <select name="maxaftstand" value="<%= user.maxaftstand %>">
+                                <option name="15km" value="15km">15km</option>
+                                <option name="30km" value="30km">30km</option>
+                                <option name="45km" value="45km">45km</option>
+                                <option name="Geen" value="Geen">Geen</option>
+                            </select> <span class="focus-input100"></span>
+          </div>
+          <div class="wrap-input100 validate-input"> Max. leeftijd
+            <br>
+            <select name="maxleeftijd" value="<%= user.maxleeftijd %>">
+                                <option name="25" value="25">25</option>
+                                <option name="30" value="30">30</option>
+                                <option name="35" value="35">35</option>
+                                <option name="40" value="40">40</option>
+                                <option name="45" value="45">45</option>
+                                <option name="50" value="50">50</option>
+                                <option name="overig" value="overig">Overig</option>
+                            </select> <span class="focus-input100"></span>
+          </div>
+          <span class="login100-form-title p-b-26">Over mij
+                                </span>
+          <div class="wrap-input100 validate-input"> Burgelijke staat:
+            <br>
+            <select name="burgelijkestaat" value="<%= user.burgelijkestaat %>">
+                                    <option name="single" value="Single">Single</option>
+                                    <option name="getrouwd" value="Getrouwd">Getrouwd</option>
+                                    <option name="gescheiden" value="Gescheiden">Gescheiden</option>
+                                    <option name="verweduwd" value="Verweduwd">Verweduwd</option>
+                                </select> <span class="focus-input100"></span> </div>
+          <div class="wrap-input100 validate-input"> Postuur:
+            <br>
+            <select name="postuur" value="<%= user.postuur %>">
+                                    <option name="slank" value="Slank">Slank</option>
+                                    <option name="normaal" value="Normaal">Normaal</option>
+                                    <option name="volslank" value="Volslank">Volslank</option>
+                                    <option name="overgewicht" value="Overgewicht">Overgewicht</option>
+                                    <option name="athletisch" value="Athletisch">Athletisch</option>
+                                </select> <span class="focus-input100"></span> </div>
+          <span class="login100-form-title p-b-26">Stel jezelf voor </span>
+
+          <label>
+            <p id="voorsteltekst">Stel door middel van een spraakmemo jezelf eventjes in het kort voor. <br> Je mag zelf bepalen wat de inhoudt wordt, maar houdt er wel rekening mee dat je jezelf hiermee voorstelt aan wellicht jouw Match! Houd het dus leuk en interessant!
+              <br> Moeite met het bedenken voor een leuke tekst? <a href="../Login_v2/aanmaken5.html"><i><b>Klik hier</b></i></a> voor wat tips! <br> Voeg hieronder je spraakmemo toe!</p><br><br>
+              <p id="voorsteltekst">Spraakmemo toevoegen:<br></p>
+              <input class="audioinput" type="file" value="<%= user.spraakmemo %>" accept="audio/*">
+          <br><br><br>
+          </label>
+
+          <label> <p id="voorsteltekst">Profielfoto toevoegen:<br></p>
+            <input class="audioinput" type="file" name="images" value="<%= user.images %>" accept="image/*">
+          </label>
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+
+              <button type="submit" class="login100-form-btn updateprofile"> Wijzig </button>
+
+              <div class="login100-form-bgbtn"></div>
+            </div>
+          </div>
+</form>
+      </div>
+    </div>
+  </div>
+  <div id="dropDownSelect1"></div>
+  <script src="/Login_v2/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/Login_v2/vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="/Login_v2/vendor/bootstrap/js/popper.js"></script>
+  <script src="/Login_v2/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="/Login_v2/vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="/Login_v2/vendor/daterangepicker/moment.min.js"></script>
+  <script src="/Login_v2/vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  <script src="/Login_v2/vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+  <script src="/Login_v2/js/main.js"></script>
+</body>
+
+</html>

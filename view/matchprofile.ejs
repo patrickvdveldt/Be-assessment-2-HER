@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Your Voice</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/Login_v2/css/main.css">
+    <link rel="stylesheet" href="/Login_v2/css/util.css">
+</head>
+
+<body>
+    <header>
+       <a href="/messages.ejs"><img class="back-button" src="/images/back-button.png" alt="back"></a>
+        <h1>Profiel</h1>
+      </header>
+    <main>
+        <div class="nieuwematches">
+            <article class="profileimg"> <img class="profilepic" src="/image/<%= data.images %>"> </article>
+            <h1><%= data.naam %></h1>
+            <br>
+            <h4><%= data.leeftijd %> jaar</h4>
+            <h4><%= data.geslacht %></h4>
+            <h4><%= data.burgelijkestaat %></h4>
+            <h4><%= data.postuur %></h4>
+        </div>
+        <section>
+            <h1 class="profielinfo"></h1> </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+</html>

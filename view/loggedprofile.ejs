@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Your Voice</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/Login_v2/css/main.css">
+    <link rel="stylesheet" href="/Login_v2/css/util.css">
+</head>
+
+<body>
+    <header>
+        <h1>Profiel</h1> </header>
+    <main>
+        <div class="nieuwematches" id="account-settings">
+            <article class="profileimg">
+              <img class="profilepic" src="/image/<%= user.images %>" alt="profiel">
+            </article>
+        </div>
+        <section>
+            <h1><%= user.naam %></h1>
+            <br>
+            <h4><%= user.leeftijd %> jaar</h4>
+            <h4><%= user.geslacht %></h4>
+          </section>
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <a href="/wijzigprofiel">
+                    <button class="login100-form-btn updateprofile"> Profiel aanpassen</button>
+                </a>
+            </div>
+        </div>
+        <br>
+        <a href="/logOut">
+            <div class="wrap-login100-form-btn">
+                <h4>Uitloggen</h4>
+            </div>
+        </a>
+        <br>
+        <a href="/remove">
+            <div class="wrap-login100-form-btn">
+                <h4>Verwijder account</h4>
+            </div>
+        </a>
+    </main>
+    <footer>
+      <nav class="cmda-tabbar">
+          <ul>
+              <li><a href="/">Ontdek</a></li>
+              <li><a href="messages.ejs">Berichten</a></li>
+              <li><a href="loggedprofile.ejs">Profiel</a></li>
+          </ul>
+      </nav>
+    </footer>
+</body>
+
+</html>

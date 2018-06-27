@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Your Voice</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/util.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ontdek</h1>
+        <h7>Welkom <%= user.naam %></h7>
+    </header>
+    <main>
+        <div class="ontdekhome">
+            <% data.forEach(function(person, index){ %>
+                <article class="ontdekprofile">
+                <audio class="spraak">
+                    <source src="/image/<%= person.spraakmemo %>" type="audio/mp3">
+                </audio>
+                <input class="play-button" type="button" value="">
+                <img class="like" src="images/likebutton.png" alt=""> <img class="dislike" src="images/dislikebutton.png" alt="">
+                <section class="introductie">
+                    <h3><%= person.naam %></h3>
+                    <p style="font-family: Poppins-Regular;"><%= person.leeftijd %></p>
+                </section>
+            </article>
+            <% }) %>
+        </div>
+    </main>
+    <footer>
+        <nav class="cmda-tabbar">
+            <ul>
+                <li><a href="/">Ontdek</a></li>
+                <li><a href="messages.ejs">Berichten</a></li>
+                <li><a href="loggedprofile.ejs">Profiel</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script type="text/javascript">
+
+    var playButton = document.querySelectorAll('.play-button');
+    for (var i = 0; i < playButton.length; i++) {
+
+       playButton[i].addEventListener('click',playAudio);
+
+    }
+
+    function playAudio(e) {
+
+      var clickedAudio = e.currentTarget.parentNode.childNodes[1];console.log(clickedAudio.className);
+      clickedAudio.play();
+    }
+
+
+    </script>
+
+</body>
+
+</html>
